@@ -285,6 +285,12 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     scoreObj.strAwayTeamId = matchesObj.awayTeamID
                 }
             }
+            if matchesObj.videoUrl == "" {
+                
+            }else{
+                scoreObj.strVideoURl = matchesObj.videoUrl
+                
+            }
         }else if segmentBtn.selectedSegmentIndex == 1 {
           let matchesObj:MatchesModel = self.arrForliveMatches[indexPath.row]as! MatchesModel
             for i in 0..<(arrForTeam.count){
@@ -302,6 +308,12 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     scoreObj.strAwayTeamId = matchesObj.awayTeamID
                 }
             }
+            if matchesObj.videoUrl == "" {
+                
+            }else{
+                scoreObj.strVideoURl = matchesObj.videoUrl
+                
+            }
         }else {
            let matchesObj:MatchesModel = self.arrForFutureMathces[indexPath.row]as! MatchesModel
             for i in 0..<(arrForTeam.count){
@@ -312,13 +324,23 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     scoreObj.strHomeTeamName = artmobj.name
                     scoreObj.strHomeTeamId = matchesObj.homeTeamID
                     scoreObj.strHomeTeamImage = artmobj.logo_small
+                    
                 }
                 if matchesObj.awayTeamID == artmobj.id {
                     scoreObj.strAwayTeamName = artmobj.name
                     scoreObj.strAwayTeamImg = artmobj.logo_small
                     scoreObj.strAwayTeamId = matchesObj.awayTeamID
+                    
                 }
+                
             }
+            if matchesObj.videoUrl == "" {
+                
+            }else{
+                scoreObj.strVideoURl = matchesObj.videoUrl
+                
+            }
+            
         }
         self.navigationController?.pushViewController(scoreObj, animated: true)
     }

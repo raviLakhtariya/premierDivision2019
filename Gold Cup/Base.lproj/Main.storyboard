@@ -428,14 +428,14 @@
                                         <rect key="frame" x="7.5" y="0.0" width="360" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kX-rJ-m56">
-                                                <rect key="frame" x="0.0" y="0.0" width="17" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="23" height="45"/>
                                                 <state key="normal" image="asset-back-button"/>
                                                 <connections>
                                                     <action selector="onClickBackBtn:" destination="IC4-WY-c2t" eventType="touchUpInside" id="r55-gJ-QUG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vS-sr-G00">
-                                                <rect key="frame" x="127" y="0.0" width="105" height="45"/>
+                                                <rect key="frame" x="133" y="0.0" width="105" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Choose Team">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -445,7 +445,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdA-OZ-24Y">
-                                                <rect key="frame" x="342" y="0.0" width="18" height="45"/>
+                                                <rect key="frame" x="348" y="0.0" width="12" height="45"/>
                                                 <state key="normal" image="asset-search"/>
                                                 <connections>
                                                     <action selector="onClickSearchBtn:" destination="IC4-WY-c2t" eventType="touchUpInside" id="uzn-P1-w0M"/>
@@ -1148,8 +1148,18 @@
                                                 <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-fZ-Pi2">
+                                                <rect key="frame" x="0.0" y="48" width="365" height="100"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="H44-8n-yDj"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="delegate" destination="IHT-DC-rYx" id="Ztg-tu-MUh"/>
+                                                </connections>
+                                            </webView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C2d-NZ-iTT">
-                                                <rect key="frame" x="0.0" y="48" width="365" height="386"/>
+                                                <rect key="frame" x="0.0" y="156" width="365" height="278"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scorecell" rowHeight="159" id="YWe-RK-SKJ" customClass="ScoreCell" customModule="Gold_Cup" customModuleProvider="target">
@@ -1385,6 +1395,7 @@
                         <outlet property="homeTeamName" destination="HO5-Ye-Xlt" id="KCh-Kp-nMX"/>
                         <outlet property="tableView" destination="C2d-NZ-iTT" id="3Fg-KV-NLi"/>
                         <outlet property="viewLiveMatchScore" destination="7H3-Ep-Vg4" id="jiY-Ff-pIY"/>
+                        <outlet property="webview" destination="KXX-fZ-Pi2" id="d24-Bp-77r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUB-qy-ZEm" userLabel="First Responder" sceneMemberID="firstResponder"/>

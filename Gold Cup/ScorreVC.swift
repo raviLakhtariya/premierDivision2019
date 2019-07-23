@@ -8,9 +8,10 @@
 
 import UIKit
 import Alamofire
-class ScorreVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ScorreVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UIWebViewDelegate {
 
     
+    @IBOutlet weak var webview: UIWebView!
     @IBOutlet weak var homeTeamName: UILabel!
     @IBOutlet weak var homeTeamImg: UIImageView!
     
@@ -50,6 +51,8 @@ class ScorreVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var strHomeTeamId : String!
     var strAwayTeamId : String!
     var strMatchID : String!
+    var strVideoURl : String!
+    
     
     @IBOutlet weak var OwnTeamGoalTxt: UILabel!
     @IBOutlet weak var awayTeamGoalTxt: UILabel!
@@ -89,6 +92,13 @@ class ScorreVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         tableView.clipsToBounds = true
         tableView.layer.masksToBounds = true
         tableView.layer.cornerRadius = 15.0
+        
+        if strVideoURl == "" {
+            
+        }else{
+            
+        }
+        
         
         
         if (strHomeTeamId != nil) {
