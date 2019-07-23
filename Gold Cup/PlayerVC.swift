@@ -45,7 +45,7 @@ class PlayerVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITex
     @IBOutlet weak var pickerView: UIPickerView!
     
     var filterdOrNot : Bool? = false
-
+    var isSelectedTeam : Bool? = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,10 +182,20 @@ class PlayerVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITex
                 return arrForSearchPlayer.count
             }
         }else{
-            if arrForPLTM == nil {
-                return 0
+            if isSelectedTeam == true{
+                if arrFOrPLTMFilter == nil {
+                    return 0
+                }else{
+                    return arrFOrPLTMFilter.count
+                }
+
             }else{
-                return arrForPLTM.count
+                if arrForPLTM == nil {
+                    return 0
+                }else{
+                    return arrForPLTM.count
+                }
+
             }
         }
         
@@ -225,31 +235,68 @@ class PlayerVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITex
                 }
             }
         }else{
-            let pltmObj : PLTM = self.arrForPLTM[indexPath.row] as! PLTM
-            playerCellObj.lblTeamName.text = pltmObj.name!
-            playerCellObj.lblPlayerName.text = pltmObj.team_name!
             
-            let mainUrl : String = "\(Webservice.LOGO_MEDIUM_URL)" + "\(pltmObj.id_team!)" + "/" + "\(pltmObj.logo_small!)"
-            print(mainUrl)
-            
-            if let url = URL(string: mainUrl) {
-                Utility.showLoading()
-                print("Download Started")
-                getDataFromUrl(url: url) { data, response, error in
-                    guard let data = data, error == nil else { return }
-                    
-                    print("Download Finished")
-                    DispatchQueue.main.async() {
-                        if pltmObj.id_team! == "2989" {
-                            playerCellObj.playerImgView.image = UIImage.init(named: "asset-no-image")
-                            Utility.hideLoading()
-                        }else{
-                            playerCellObj.playerImgView.image = UIImage(data: data)
-                            Utility.hideLoading()
+            if isSelectedTeam == true{
+                
+                let pltmObj : PLTM = self.arrFOrPLTMFilter[indexPath.row] as! PLTM
+                playerCellObj.lblTeamName.text = pltmObj.name!
+                playerCellObj.lblPlayerName.text = pltmObj.team_name!
+                
+                let mainUrl : String = "\(Webservice.LOGO_MEDIUM_URL)" + "\(pltmObj.id_team!)" + "/" + "\(pltmObj.logo_small!)"
+                print(mainUrl)
+                
+                if let url = URL(string: mainUrl) {
+                    Utility.showLoading()
+                    print("Download Started")
+                    getDataFromUrl(url: url) { data, response, error in
+                        guard let data = data, error == nil else { return }
+                        
+                        print("Download Finished")
+                        DispatchQueue.main.async() {
+                            if pltmObj.id_team! == "2989" {
+                                playerCellObj.playerImgView.image = UIImage.init(named: "asset-no-image")
+                                Utility.hideLoading()
+                            }else{
+                                playerCellObj.playerImgView.image = UIImage(data: data)
+                                Utility.hideLoading()
+                            }
+                        }
+                    }
+                }
+                
+                
+                
+            }else{
+                let pltmObj : PLTM = self.arrForPLTM[indexPath.row] as! PLTM
+                playerCellObj.lblTeamName.text = pltmObj.name!
+                playerCellObj.lblPlayerName.text = pltmObj.team_name!
+                
+                let mainUrl : String = "\(Webservice.LOGO_MEDIUM_URL)" + "\(pltmObj.id_team!)" + "/" + "\(pltmObj.logo_small!)"
+                print(mainUrl)
+                
+                if let url = URL(string: mainUrl) {
+                    Utility.showLoading()
+                    print("Download Started")
+                    getDataFromUrl(url: url) { data, response, error in
+                        guard let data = data, error == nil else { return }
+                        
+                        print("Download Finished")
+                        DispatchQueue.main.async() {
+                            if pltmObj.id_team! == "2989" {
+                                playerCellObj.playerImgView.image = UIImage.init(named: "asset-no-image")
+                                Utility.hideLoading()
+                            }else{
+                                playerCellObj.playerImgView.image = UIImage(data: data)
+                                Utility.hideLoading()
+                            }
                         }
                     }
                 }
             }
+            
+            
+            
+           
         }
   /*       let playerObj : Players = self.arrForPlayer[indexPath.row] as! Players
 
@@ -422,16 +469,32 @@ class PlayerVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITex
         }
     
     @IBAction func onClickBtnOk(_ sender: Any) {
-        
-        for i in 0..<arrForPLTM.count {
-            var arrobj : PLTM = arrForPLTM[i] as! PLTM
-            if idStr == arrobj.id_team{
+        self.arrFOrPLTMFilter.removeAllObjects()
+        if idStr == ""{
+            isSelectedTeam = false
+        }else{
+            isSelectedTeam = true
+    
+            for i in 0..<arrForPLTM.count {
+                var arrobj : PLTM = arrForPLTM[i] as! PLTM
+                
+                if idStr == arrobj.id_team{
+                    let objects : PLTM! = PLTM()
+                    objects.id_team = arrobj.id_team
+                    objects.id = arrobj.id
+                    objects.name = arrobj.name
+                    objects.logo_small = arrobj.logo_small
+                    objects.team_name = arrobj.team_name
+                    
+                    arrFOrPLTMFilter.add(arrobj)
+                }
                 
             }
+            self.tableview.reloadData()
+            self.viewForPIcker.isHidden = true
+            
             
         }
-        self.viewForPIcker.isHidden = true
-        
     
     }
     @IBAction func onClickBtnCancel(_ sender: Any) {
