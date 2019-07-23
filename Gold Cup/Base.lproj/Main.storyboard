@@ -1845,12 +1845,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-J8-20U">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset-background" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-J8-20U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0K-ah-bXr">
                                 <rect key="frame" x="0.0" y="20" width="375" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.027450980390000001" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="RJk-Kt-i2U"/>
                                 </constraints>
@@ -1920,7 +1920,7 @@
                                     <outlet property="delegate" destination="DWw-Fh-1Zc" id="BFV-9w-hnv"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZ2-QW-lC9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoicon" translatesAutoresizingMaskIntoConstraints="NO" id="UZ2-QW-lC9">
                                 <rect key="frame" x="123.5" y="114" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UZ2-QW-lC9" secondAttribute="height" multiplier="1:1" id="KYR-Nq-GnJ"/>
@@ -1933,8 +1933,8 @@
                             <constraint firstItem="DE0-J8-20U" firstAttribute="width" secondItem="4nY-75-Bcm" secondAttribute="width" id="75S-m3-RxH"/>
                             <constraint firstItem="T0K-ah-bXr" firstAttribute="centerX" secondItem="DlP-gl-qbr" secondAttribute="centerX" id="8lR-fM-EUK"/>
                             <constraint firstItem="UZ2-QW-lC9" firstAttribute="centerX" secondItem="DlP-gl-qbr" secondAttribute="centerX" id="Axi-Sk-4PN"/>
-                            <constraint firstItem="DE0-J8-20U" firstAttribute="height" secondItem="4nY-75-Bcm" secondAttribute="height" id="Fgi-r5-Cgk"/>
-                            <constraint firstItem="DE0-J8-20U" firstAttribute="centerY" secondItem="DlP-gl-qbr" secondAttribute="centerY" id="Hgu-gZ-Bva"/>
+                            <constraint firstItem="DE0-J8-20U" firstAttribute="height" secondItem="4nY-75-Bcm" secondAttribute="height" constant="10" id="Fgi-r5-Cgk"/>
+                            <constraint firstItem="DE0-J8-20U" firstAttribute="centerY" secondItem="DlP-gl-qbr" secondAttribute="centerY" constant="-5" id="Hgu-gZ-Bva"/>
                             <constraint firstItem="T0K-ah-bXr" firstAttribute="top" secondItem="DlP-gl-qbr" secondAttribute="top" id="IxC-Ul-Af3"/>
                             <constraint firstItem="T0K-ah-bXr" firstAttribute="width" secondItem="4nY-75-Bcm" secondAttribute="width" id="O5J-Pc-0jc"/>
                             <constraint firstItem="DlP-gl-qbr" firstAttribute="bottom" secondItem="fem-hO-7gO" secondAttribute="bottom" constant="109" id="TCM-62-Cmq"/>
@@ -1961,7 +1961,8 @@
         <image name="Close White Button" width="16" height="16"/>
         <image name="asset-back-" width="16" height="16"/>
         <image name="asset-back-button" width="46" height="32"/>
+        <image name="asset-background" width="889" height="1334"/>
         <image name="asset-search" width="36" height="36"/>
-        <image name="splash" width="540" height="960.48193359375"/>
+        <image name="logoicon" width="737.28143310546875" height="737.28143310546875"/>
     </resources>
 </document>
