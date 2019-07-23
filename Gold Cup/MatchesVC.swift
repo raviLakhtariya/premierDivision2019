@@ -14,6 +14,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var CountDown: UILabel!
     
+    @IBOutlet weak var viewtable: UIView!
     var timeIsOn : Bool = false
     var timer = Timer()
     var arrayTeam : [String]!
@@ -36,6 +37,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var arrForFutureMathces : NSMutableArray = NSMutableArray.init()
     var matchesJson : Matches!
     var selectedIndex : NSInteger!
+    
     var DefaultFormatStr = "0000-00-00 00:00:00"
     
     override func viewDidLoad() {
@@ -50,6 +52,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         self.tableview.clipsToBounds = true
         self.tableview.layer.masksToBounds = true
         self.tableview.layer.cornerRadius = 15.0
+        self.viewtable.layer.cornerRadius = 15.0
+        self.viewtable.layer.masksToBounds = true
+        self.viewtable.clipsToBounds = true
+        self.viewtable.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -58,7 +64,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         dataFecthonQuery()
         
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.viewtable.isHidden = true
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentBtn.selectedSegmentIndex == 0 {
             if arrForPastMatches == nil {
@@ -155,6 +164,9 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             matchesCellObj.timeSchedule.text = matchesObj.date
    
         }else if segmentBtn.selectedSegmentIndex == 1 {
+            if self.arrForliveMatches.count == 0 {
+                self.viewtable.isHidden = false
+            }
             let matchesObj:MatchesModel = self.arrForliveMatches[indexPath.row]as! MatchesModel
             
             for i in 0..<(arrForTeam.count){
@@ -211,6 +223,9 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             matchesCellObj.timeSchedule.text = matchesObj.date
         }else {
            let matchesObj:MatchesModel = self.arrForFutureMathces[indexPath.row]as! MatchesModel
+            if self.arrForFutureMathces.count == 0 {
+                self.viewtable.isHidden = false
+            }
             for i in 0..<(arrForTeam.count){
                 var artmobj : Team = self.arrForTeam.object(at: i) as! Team
                 
