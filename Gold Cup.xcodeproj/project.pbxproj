@@ -1,0 +1,906 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88C82EEEF6A823473D7A5FE1 /* Pods_Gold_CupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E766965CC36E1423BC32E9 /* Pods_Gold_CupTests.framework */; };
+		8F0EEF4A22CA6FCF00F5F6AE /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0EEF4922CA6FCF00F5F6AE /* ScoreCell.swift */; };
+		8F27F39C22DE1F1B0073D6F1 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27F39922DE1F1A0073D6F1 /* Seasons.swift */; };
+		8F27F39D22DE1F1B0073D6F1 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27F39A22DE1F1A0073D6F1 /* Ad.swift */; };
+		8F27F39E22DE1F1B0073D6F1 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27F39B22DE1F1A0073D6F1 /* Base.swift */; };
+		8F413B3622C8872800DE59C2 /* MatchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F413B3522C8872800DE59C2 /* MatchesModel.swift */; };
+		8F413B3822C88AA200DE59C2 /* ScoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F413B3722C88AA200DE59C2 /* ScoresModel.swift */; };
+		8F413B3A22C8A19000DE59C2 /* ScorreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F413B3922C8A19000DE59C2 /* ScorreVC.swift */; };
+		8F4D922622C67F0900913256 /* PlyerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D922522C67F0900913256 /* PlyerDetailVC.swift */; };
+		8F91EE5222C1282A003B8C43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE5122C1282A003B8C43 /* AppDelegate.swift */; };
+		8F91EE5422C1282A003B8C43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE5322C1282A003B8C43 /* ViewController.swift */; };
+		8F91EE5722C1282A003B8C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F91EE5522C1282A003B8C43 /* Main.storyboard */; };
+		8F91EE5922C1282C003B8C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F91EE5822C1282C003B8C43 /* Assets.xcassets */; };
+		8F91EE5C22C1282C003B8C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F91EE5A22C1282C003B8C43 /* LaunchScreen.storyboard */; };
+		8F91EE6722C1282C003B8C43 /* Gold_CupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE6622C1282C003B8C43 /* Gold_CupTests.swift */; };
+		8F91EE7222C1282C003B8C43 /* Gold_CupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE7122C1282C003B8C43 /* Gold_CupUITests.swift */; };
+		8F91EE8022C1287B003B8C43 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE7F22C1287B003B8C43 /* constants.swift */; };
+		8F91EE8822C128CC003B8C43 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8122C128CB003B8C43 /* Cards.swift */; };
+		8F91EE8922C128CC003B8C43 /* Rounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8222C128CB003B8C43 /* Rounds.swift */; };
+		8F91EE8A22C128CC003B8C43 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8322C128CC003B8C43 /* Player.swift */; };
+		8F91EE8B22C128CC003B8C43 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8422C128CC003B8C43 /* Teams.swift */; };
+		8F91EE8C22C128CC003B8C43 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8522C128CC003B8C43 /* Json4Swift_Base.swift */; };
+		8F91EE8D22C128CC003B8C43 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8622C128CC003B8C43 /* Matches.swift */; };
+		8F91EE8E22C128CC003B8C43 /* Scorers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE8722C128CC003B8C43 /* Scorers.swift */; };
+		8F91EE9122C12989003B8C43 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9022C12989003B8C43 /* Utility.swift */; };
+		8F91EE9322C129AB003B8C43 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9222C129AB003B8C43 /* Reachability.swift */; };
+		8F91EE9522C129E6003B8C43 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9422C129E5003B8C43 /* UIViewExtension.swift */; };
+		8F91EE9722C12BB1003B8C43 /* mainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9622C12BB1003B8C43 /* mainCell.swift */; };
+		8F91EE9922C12F50003B8C43 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9822C12F50003B8C43 /* TeamCell.swift */; };
+		8F91EE9B22C12F7B003B8C43 /* TeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9A22C12F7B003B8C43 /* TeamVC.swift */; };
+		8F91EE9D22C12F93003B8C43 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9C22C12F93003B8C43 /* MatchesVC.swift */; };
+		8F91EE9F22C12FA3003B8C43 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EE9E22C12FA3003B8C43 /* PlayerVC.swift */; };
+		8F91EEA122C1307B003B8C43 /* TeamsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91EEA022C1307B003B8C43 /* TeamsDetailVC.swift */; };
+		8FB0B03F22DCD86F00203FF6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0B03E22DCD86F00203FF6 /* DateExtension.swift */; };
+		8FFE5DA222CBC60100E2BE1F /* playerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE5DA122CBC60100E2BE1F /* playerDetailCell.swift */; };
+		AA669635E81F1B1FCC0C7EF2 /* Pods_Gold_Cup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFCE65239496BA8D5EBD0D7 /* Pods_Gold_Cup.framework */; };
+		B80AF12822DEF29000D57673 /* detailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80AF12722DEF29000D57673 /* detailVC.swift */; };
+		B83CA0A522DDA45C00BE7EA5 /* SeasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CA0A422DDA45C00BE7EA5 /* SeasonCell.swift */; };
+		B87FAEDC22C350CC00F4E962 /* PLTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FAEDB22C350CC00F4E962 /* PLTM.swift */; };
+		B87FAEDE22C358AE00F4E962 /* PlayerTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FAEDD22C358AE00F4E962 /* PlayerTeam.swift */; };
+		B880AA8522DD840800DC74A1 /* PreferenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B880AA8422DD840700DC74A1 /* PreferenceHelper.swift */; };
+		B880AA8722DD875200DC74A1 /* SeasonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B880AA8622DD875200DC74A1 /* SeasonVC.swift */; };
+		B88B491722C239AD00C1D278 /* playerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B491622C239AD00C1D278 /* playerCell.swift */; };
+		B88B491922C23CB400C1D278 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B491822C23CB400C1D278 /* Players.swift */; };
+		B88B491B22C250B900C1D278 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B491A22C250B900C1D278 /* MatchesCell.swift */; };
+		B8B1C55F22C1DAF700AF9854 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1C55E22C1DAF700AF9854 /* Team.swift */; };
+		B8B1C56122C1E4B100AF9854 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1C56022C1E4B100AF9854 /* Parser.swift */; };
+		B8FB732A22CC7F4100262FE9 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB732722CC7F3B00262FE9 /* SkyFloatingLabelTextField.swift */; };
+		B8FB732B22CC7F4100262FE9 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB732822CC7F3C00262FE9 /* UITextField+fixCaretPosition.swift */; };
+		B8FB732C22CC7F4100262FE9 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB732922CC7F4000262FE9 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		ECA10246CBB74AB36F2BDA9D /* Pods_Gold_CupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD27AFB291ABF637E72871F4 /* Pods_Gold_CupUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F91EE6322C1282C003B8C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F91EE4622C1282A003B8C43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F91EE4D22C1282A003B8C43;
+			remoteInfo = "Gold Cup";
+		};
+		8F91EE6E22C1282C003B8C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F91EE4622C1282A003B8C43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F91EE4D22C1282A003B8C43;
+			remoteInfo = "Gold Cup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86CF94A53AA88EC94B26A129 /* Pods-Gold Cup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold Cup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gold Cup/Pods-Gold Cup.debug.xcconfig"; sourceTree = "<group>"; };
+		8F0EEF4922CA6FCF00F5F6AE /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		8F27F39922DE1F1A0073D6F1 /* Seasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seasons.swift; path = "Gold Cup/codegen_5d2de739042ab/Seasons.swift"; sourceTree = SOURCE_ROOT; };
+		8F27F39A22DE1F1A0073D6F1 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ad.swift; path = "Gold Cup/codegen_5d2de739042ab/Ad.swift"; sourceTree = SOURCE_ROOT; };
+		8F27F39B22DE1F1A0073D6F1 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base.swift; path = "Gold Cup/codegen_5d2de739042ab/Base.swift"; sourceTree = SOURCE_ROOT; };
+		8F413B3522C8872800DE59C2 /* MatchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesModel.swift; sourceTree = "<group>"; };
+		8F413B3722C88AA200DE59C2 /* ScoresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresModel.swift; sourceTree = "<group>"; };
+		8F413B3922C8A19000DE59C2 /* ScorreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorreVC.swift; sourceTree = "<group>"; };
+		8F4D922522C67F0900913256 /* PlyerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlyerDetailVC.swift; sourceTree = "<group>"; };
+		8F91EE4E22C1282A003B8C43 /* Gold Cup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gold Cup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F91EE5122C1282A003B8C43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F91EE5322C1282A003B8C43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F91EE5622C1282A003B8C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F91EE5822C1282C003B8C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F91EE5B22C1282C003B8C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F91EE5D22C1282C003B8C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F91EE6222C1282C003B8C43 /* Gold CupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gold CupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F91EE6622C1282C003B8C43 /* Gold_CupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gold_CupTests.swift; sourceTree = "<group>"; };
+		8F91EE6822C1282C003B8C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F91EE6D22C1282C003B8C43 /* Gold CupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gold CupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F91EE7122C1282C003B8C43 /* Gold_CupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gold_CupUITests.swift; sourceTree = "<group>"; };
+		8F91EE7322C1282C003B8C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F91EE7F22C1287B003B8C43 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		8F91EE8122C128CB003B8C43 /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		8F91EE8222C128CB003B8C43 /* Rounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rounds.swift; sourceTree = "<group>"; };
+		8F91EE8322C128CC003B8C43 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8F91EE8422C128CC003B8C43 /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		8F91EE8522C128CC003B8C43 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		8F91EE8622C128CC003B8C43 /* Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		8F91EE8722C128CC003B8C43 /* Scorers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scorers.swift; sourceTree = "<group>"; };
+		8F91EE9022C12989003B8C43 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		8F91EE9222C129AB003B8C43 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8F91EE9422C129E5003B8C43 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8F91EE9622C12BB1003B8C43 /* mainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainCell.swift; sourceTree = "<group>"; };
+		8F91EE9822C12F50003B8C43 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		8F91EE9A22C12F7B003B8C43 /* TeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamVC.swift; sourceTree = "<group>"; };
+		8F91EE9C22C12F93003B8C43 /* MatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesVC.swift; sourceTree = "<group>"; };
+		8F91EE9E22C12FA3003B8C43 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		8F91EEA022C1307B003B8C43 /* TeamsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsDetailVC.swift; sourceTree = "<group>"; };
+		8FB0B03E22DCD86F00203FF6 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		8FFE5DA122CBC60100E2BE1F /* playerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerDetailCell.swift; sourceTree = "<group>"; };
+		A781D6A722DEE683EA773F44 /* Pods-Gold CupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold CupTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gold CupTests/Pods-Gold CupTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFFCE65239496BA8D5EBD0D7 /* Pods_Gold_Cup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gold_Cup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2260392E1B9DFF9F0AF6134 /* Pods-Gold CupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold CupUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gold CupUITests/Pods-Gold CupUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B80AF12722DEF29000D57673 /* detailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailVC.swift; sourceTree = "<group>"; };
+		B83CA0A422DDA45C00BE7EA5 /* SeasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCell.swift; sourceTree = "<group>"; };
+		B87FAEDB22C350CC00F4E962 /* PLTM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTM.swift; sourceTree = "<group>"; };
+		B87FAEDD22C358AE00F4E962 /* PlayerTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTeam.swift; sourceTree = "<group>"; };
+		B880AA8422DD840700DC74A1 /* PreferenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceHelper.swift; sourceTree = "<group>"; };
+		B880AA8622DD875200DC74A1 /* SeasonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonVC.swift; sourceTree = "<group>"; };
+		B88B491622C239AD00C1D278 /* playerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerCell.swift; sourceTree = "<group>"; };
+		B88B491822C23CB400C1D278 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		B88B491A22C250B900C1D278 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		B8B1C55E22C1DAF700AF9854 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B8B1C56022C1E4B100AF9854 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B8FB732722CC7F3B00262FE9 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		B8FB732822CC7F3C00262FE9 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		B8FB732922CC7F4000262FE9 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		CB43A3D5CA2C2154850EA17A /* Pods-Gold CupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold CupTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gold CupTests/Pods-Gold CupTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD1CBA66C750896665F21F81 /* Pods-Gold CupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold CupUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gold CupUITests/Pods-Gold CupUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D459F72E3C73E0DCA55079D2 /* Pods-Gold Cup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gold Cup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gold Cup/Pods-Gold Cup.release.xcconfig"; sourceTree = "<group>"; };
+		DD27AFB291ABF637E72871F4 /* Pods_Gold_CupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gold_CupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E766965CC36E1423BC32E9 /* Pods_Gold_CupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gold_CupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F91EE4B22C1282A003B8C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA669635E81F1B1FCC0C7EF2 /* Pods_Gold_Cup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE5F22C1282C003B8C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C82EEEF6A823473D7A5FE1 /* Pods_Gold_CupTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE6A22C1282C003B8C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA10246CBB74AB36F2BDA9D /* Pods_Gold_CupUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C539F90F65ED8C72B1BAB44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFFCE65239496BA8D5EBD0D7 /* Pods_Gold_Cup.framework */,
+				E9E766965CC36E1423BC32E9 /* Pods_Gold_CupTests.framework */,
+				DD27AFB291ABF637E72871F4 /* Pods_Gold_CupUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F91EE4522C1282A003B8C43 = {
+			isa = PBXGroup;
+			children = (
+				8F91EE5022C1282A003B8C43 /* Gold Cup */,
+				8F91EE6522C1282C003B8C43 /* Gold CupTests */,
+				8F91EE7022C1282C003B8C43 /* Gold CupUITests */,
+				8F91EE4F22C1282A003B8C43 /* Products */,
+				9EC141EA8967DFBC44C354AC /* Pods */,
+				4C539F90F65ED8C72B1BAB44 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F91EE4F22C1282A003B8C43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F91EE4E22C1282A003B8C43 /* Gold Cup.app */,
+				8F91EE6222C1282C003B8C43 /* Gold CupTests.xctest */,
+				8F91EE6D22C1282C003B8C43 /* Gold CupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F91EE5022C1282A003B8C43 /* Gold Cup */ = {
+			isa = PBXGroup;
+			children = (
+				8F91EE5122C1282A003B8C43 /* AppDelegate.swift */,
+				8F91EE5322C1282A003B8C43 /* ViewController.swift */,
+				8F91EE9622C12BB1003B8C43 /* mainCell.swift */,
+				8F91EE5522C1282A003B8C43 /* Main.storyboard */,
+				8F91EE9A22C12F7B003B8C43 /* TeamVC.swift */,
+				B880AA8622DD875200DC74A1 /* SeasonVC.swift */,
+				8FFE5DA122CBC60100E2BE1F /* playerDetailCell.swift */,
+				8F91EEA022C1307B003B8C43 /* TeamsDetailVC.swift */,
+				8F0EEF4922CA6FCF00F5F6AE /* ScoreCell.swift */,
+				8F91EE9C22C12F93003B8C43 /* MatchesVC.swift */,
+				8F413B3922C8A19000DE59C2 /* ScorreVC.swift */,
+				8F91EE9E22C12FA3003B8C43 /* PlayerVC.swift */,
+				8F4D922522C67F0900913256 /* PlyerDetailVC.swift */,
+				B83CA0A422DDA45C00BE7EA5 /* SeasonCell.swift */,
+				B80AF12722DEF29000D57673 /* detailVC.swift */,
+				8F91EE8F22C128D8003B8C43 /* model */,
+				8F91EE7F22C1287B003B8C43 /* constants.swift */,
+				B88B491A22C250B900C1D278 /* MatchesCell.swift */,
+				B8B1C56022C1E4B100AF9854 /* Parser.swift */,
+				8F91EE9022C12989003B8C43 /* Utility.swift */,
+				8FB0B03E22DCD86F00203FF6 /* DateExtension.swift */,
+				B88B491622C239AD00C1D278 /* playerCell.swift */,
+				B880AA8422DD840700DC74A1 /* PreferenceHelper.swift */,
+				8F91EE9222C129AB003B8C43 /* Reachability.swift */,
+				8F91EE9822C12F50003B8C43 /* TeamCell.swift */,
+				B8FB732722CC7F3B00262FE9 /* SkyFloatingLabelTextField.swift */,
+				B8FB732922CC7F4000262FE9 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				B8FB732822CC7F3C00262FE9 /* UITextField+fixCaretPosition.swift */,
+				8F91EE5822C1282C003B8C43 /* Assets.xcassets */,
+				8F91EE5A22C1282C003B8C43 /* LaunchScreen.storyboard */,
+				8F91EE5D22C1282C003B8C43 /* Info.plist */,
+				8F91EE9422C129E5003B8C43 /* UIViewExtension.swift */,
+			);
+			path = "Gold Cup";
+			sourceTree = "<group>";
+		};
+		8F91EE6522C1282C003B8C43 /* Gold CupTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F91EE6622C1282C003B8C43 /* Gold_CupTests.swift */,
+				8F91EE6822C1282C003B8C43 /* Info.plist */,
+			);
+			path = "Gold CupTests";
+			sourceTree = "<group>";
+		};
+		8F91EE7022C1282C003B8C43 /* Gold CupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F91EE7122C1282C003B8C43 /* Gold_CupUITests.swift */,
+				8F91EE7322C1282C003B8C43 /* Info.plist */,
+			);
+			path = "Gold CupUITests";
+			sourceTree = "<group>";
+		};
+		8F91EE8F22C128D8003B8C43 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8F27F39A22DE1F1A0073D6F1 /* Ad.swift */,
+				8F27F39B22DE1F1A0073D6F1 /* Base.swift */,
+				8F27F39922DE1F1A0073D6F1 /* Seasons.swift */,
+				8F91EE8122C128CB003B8C43 /* Cards.swift */,
+				8F91EE8522C128CC003B8C43 /* Json4Swift_Base.swift */,
+				8F91EE8622C128CC003B8C43 /* Matches.swift */,
+				8F413B3522C8872800DE59C2 /* MatchesModel.swift */,
+				8F413B3722C88AA200DE59C2 /* ScoresModel.swift */,
+				8F91EE8322C128CC003B8C43 /* Player.swift */,
+				8F91EE8222C128CB003B8C43 /* Rounds.swift */,
+				8F91EE8722C128CC003B8C43 /* Scorers.swift */,
+				8F91EE8422C128CC003B8C43 /* Teams.swift */,
+				B8B1C55E22C1DAF700AF9854 /* Team.swift */,
+				B88B491822C23CB400C1D278 /* Players.swift */,
+				B87FAEDB22C350CC00F4E962 /* PLTM.swift */,
+				B87FAEDD22C358AE00F4E962 /* PlayerTeam.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9EC141EA8967DFBC44C354AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86CF94A53AA88EC94B26A129 /* Pods-Gold Cup.debug.xcconfig */,
+				D459F72E3C73E0DCA55079D2 /* Pods-Gold Cup.release.xcconfig */,
+				A781D6A722DEE683EA773F44 /* Pods-Gold CupTests.debug.xcconfig */,
+				CB43A3D5CA2C2154850EA17A /* Pods-Gold CupTests.release.xcconfig */,
+				B2260392E1B9DFF9F0AF6134 /* Pods-Gold CupUITests.debug.xcconfig */,
+				CD1CBA66C750896665F21F81 /* Pods-Gold CupUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F91EE4D22C1282A003B8C43 /* Gold Cup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F91EE7622C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold Cup" */;
+			buildPhases = (
+				FBD749E048FB73D350F5336F /* [CP] Check Pods Manifest.lock */,
+				8F91EE4A22C1282A003B8C43 /* Sources */,
+				8F91EE4B22C1282A003B8C43 /* Frameworks */,
+				8F91EE4C22C1282A003B8C43 /* Resources */,
+				B86AEBC7CE11A3A5CD5B7C77 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gold Cup";
+			productName = "Gold Cup";
+			productReference = 8F91EE4E22C1282A003B8C43 /* Gold Cup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F91EE6122C1282C003B8C43 /* Gold CupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F91EE7922C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold CupTests" */;
+			buildPhases = (
+				7D92F645D537F78AE7B28240 /* [CP] Check Pods Manifest.lock */,
+				8F91EE5E22C1282C003B8C43 /* Sources */,
+				8F91EE5F22C1282C003B8C43 /* Frameworks */,
+				8F91EE6022C1282C003B8C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F91EE6422C1282C003B8C43 /* PBXTargetDependency */,
+			);
+			name = "Gold CupTests";
+			productName = "Gold CupTests";
+			productReference = 8F91EE6222C1282C003B8C43 /* Gold CupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F91EE6C22C1282C003B8C43 /* Gold CupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F91EE7C22C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold CupUITests" */;
+			buildPhases = (
+				1771E1F93B9AFBCF824BDD0A /* [CP] Check Pods Manifest.lock */,
+				8F91EE6922C1282C003B8C43 /* Sources */,
+				8F91EE6A22C1282C003B8C43 /* Frameworks */,
+				8F91EE6B22C1282C003B8C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F91EE6F22C1282C003B8C43 /* PBXTargetDependency */,
+			);
+			name = "Gold CupUITests";
+			productName = "Gold CupUITests";
+			productReference = 8F91EE6D22C1282C003B8C43 /* Gold CupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F91EE4622C1282A003B8C43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "infotech IT Solution";
+				TargetAttributes = {
+					8F91EE4D22C1282A003B8C43 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					8F91EE6122C1282C003B8C43 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8F91EE4D22C1282A003B8C43;
+					};
+					8F91EE6C22C1282C003B8C43 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8F91EE4D22C1282A003B8C43;
+					};
+				};
+			};
+			buildConfigurationList = 8F91EE4922C1282A003B8C43 /* Build configuration list for PBXProject "Gold Cup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F91EE4522C1282A003B8C43;
+			productRefGroup = 8F91EE4F22C1282A003B8C43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F91EE4D22C1282A003B8C43 /* Gold Cup */,
+				8F91EE6122C1282C003B8C43 /* Gold CupTests */,
+				8F91EE6C22C1282C003B8C43 /* Gold CupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F91EE4C22C1282A003B8C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91EE5C22C1282C003B8C43 /* LaunchScreen.storyboard in Resources */,
+				8F91EE5922C1282C003B8C43 /* Assets.xcassets in Resources */,
+				8F91EE5722C1282A003B8C43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE6022C1282C003B8C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE6B22C1282C003B8C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1771E1F93B9AFBCF824BDD0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gold CupUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D92F645D537F78AE7B28240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gold CupTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B86AEBC7CE11A3A5CD5B7C77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gold Cup/Pods-Gold Cup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gold Cup/Pods-Gold Cup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD749E048FB73D350F5336F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gold Cup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F91EE4A22C1282A003B8C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F413B3A22C8A19000DE59C2 /* ScorreVC.swift in Sources */,
+				B880AA8522DD840800DC74A1 /* PreferenceHelper.swift in Sources */,
+				8F91EE8B22C128CC003B8C43 /* Teams.swift in Sources */,
+				B880AA8722DD875200DC74A1 /* SeasonVC.swift in Sources */,
+				8F91EE5422C1282A003B8C43 /* ViewController.swift in Sources */,
+				8F91EE9D22C12F93003B8C43 /* MatchesVC.swift in Sources */,
+				8F91EE9922C12F50003B8C43 /* TeamCell.swift in Sources */,
+				8F91EE9722C12BB1003B8C43 /* mainCell.swift in Sources */,
+				B87FAEDE22C358AE00F4E962 /* PlayerTeam.swift in Sources */,
+				8F4D922622C67F0900913256 /* PlyerDetailVC.swift in Sources */,
+				B80AF12822DEF29000D57673 /* detailVC.swift in Sources */,
+				8F91EE9322C129AB003B8C43 /* Reachability.swift in Sources */,
+				B88B491922C23CB400C1D278 /* Players.swift in Sources */,
+				8F27F39E22DE1F1B0073D6F1 /* Base.swift in Sources */,
+				8F91EE5222C1282A003B8C43 /* AppDelegate.swift in Sources */,
+				8F91EE9122C12989003B8C43 /* Utility.swift in Sources */,
+				B8FB732A22CC7F4100262FE9 /* SkyFloatingLabelTextField.swift in Sources */,
+				8FB0B03F22DCD86F00203FF6 /* DateExtension.swift in Sources */,
+				8F413B3622C8872800DE59C2 /* MatchesModel.swift in Sources */,
+				B87FAEDC22C350CC00F4E962 /* PLTM.swift in Sources */,
+				B8B1C55F22C1DAF700AF9854 /* Team.swift in Sources */,
+				B83CA0A522DDA45C00BE7EA5 /* SeasonCell.swift in Sources */,
+				B8FB732C22CC7F4100262FE9 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				8F91EE9B22C12F7B003B8C43 /* TeamVC.swift in Sources */,
+				B88B491722C239AD00C1D278 /* playerCell.swift in Sources */,
+				8FFE5DA222CBC60100E2BE1F /* playerDetailCell.swift in Sources */,
+				8F91EE9F22C12FA3003B8C43 /* PlayerVC.swift in Sources */,
+				8F91EE8022C1287B003B8C43 /* constants.swift in Sources */,
+				8F0EEF4A22CA6FCF00F5F6AE /* ScoreCell.swift in Sources */,
+				8F91EE8822C128CC003B8C43 /* Cards.swift in Sources */,
+				8F27F39C22DE1F1B0073D6F1 /* Seasons.swift in Sources */,
+				8F91EE8E22C128CC003B8C43 /* Scorers.swift in Sources */,
+				8F27F39D22DE1F1B0073D6F1 /* Ad.swift in Sources */,
+				B8FB732B22CC7F4100262FE9 /* UITextField+fixCaretPosition.swift in Sources */,
+				8F91EE8C22C128CC003B8C43 /* Json4Swift_Base.swift in Sources */,
+				8F413B3822C88AA200DE59C2 /* ScoresModel.swift in Sources */,
+				B88B491B22C250B900C1D278 /* MatchesCell.swift in Sources */,
+				8F91EE9522C129E6003B8C43 /* UIViewExtension.swift in Sources */,
+				8F91EE8A22C128CC003B8C43 /* Player.swift in Sources */,
+				8F91EE8D22C128CC003B8C43 /* Matches.swift in Sources */,
+				8F91EEA122C1307B003B8C43 /* TeamsDetailVC.swift in Sources */,
+				8F91EE8922C128CC003B8C43 /* Rounds.swift in Sources */,
+				B8B1C56122C1E4B100AF9854 /* Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE5E22C1282C003B8C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91EE6722C1282C003B8C43 /* Gold_CupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F91EE6922C1282C003B8C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F91EE7222C1282C003B8C43 /* Gold_CupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F91EE6422C1282C003B8C43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F91EE4D22C1282A003B8C43 /* Gold Cup */;
+			targetProxy = 8F91EE6322C1282C003B8C43 /* PBXContainerItemProxy */;
+		};
+		8F91EE6F22C1282C003B8C43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F91EE4D22C1282A003B8C43 /* Gold Cup */;
+			targetProxy = 8F91EE6E22C1282C003B8C43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F91EE5522C1282A003B8C43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F91EE5622C1282A003B8C43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F91EE5A22C1282C003B8C43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F91EE5B22C1282C003B8C43 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F91EE7422C1282C003B8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F91EE7522C1282C003B8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F91EE7722C1282C003B8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86CF94A53AA88EC94B26A129 /* Pods-Gold Cup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold Cup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infotech.premeier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8F91EE7822C1282C003B8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D459F72E3C73E0DCA55079D2 /* Pods-Gold Cup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold Cup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infotech.premeier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8F91EE7A22C1282C003B8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A781D6A722DEE683EA773F44 /* Pods-Gold CupTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold CupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AAA.Gold-CupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gold Cup.app/Gold Cup";
+			};
+			name = Debug;
+		};
+		8F91EE7B22C1282C003B8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB43A3D5CA2C2154850EA17A /* Pods-Gold CupTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold CupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AAA.Gold-CupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gold Cup.app/Gold Cup";
+			};
+			name = Release;
+		};
+		8F91EE7D22C1282C003B8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2260392E1B9DFF9F0AF6134 /* Pods-Gold CupUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold CupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AAA.Gold-CupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Gold Cup";
+			};
+			name = Debug;
+		};
+		8F91EE7E22C1282C003B8C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD1CBA66C750896665F21F81 /* Pods-Gold CupUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NHS44V6V5;
+				INFOPLIST_FILE = "Gold CupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AAA.Gold-CupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Gold Cup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F91EE4922C1282A003B8C43 /* Build configuration list for PBXProject "Gold Cup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91EE7422C1282C003B8C43 /* Debug */,
+				8F91EE7522C1282C003B8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F91EE7622C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold Cup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91EE7722C1282C003B8C43 /* Debug */,
+				8F91EE7822C1282C003B8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F91EE7922C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold CupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91EE7A22C1282C003B8C43 /* Debug */,
+				8F91EE7B22C1282C003B8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F91EE7C22C1282C003B8C43 /* Build configuration list for PBXNativeTarget "Gold CupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F91EE7D22C1282C003B8C43 /* Debug */,
+				8F91EE7E22C1282C003B8C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F91EE4622C1282A003B8C43 /* Project object */;
+}
