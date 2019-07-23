@@ -1,0 +1,6 @@
+framework module Pods_Gold_Cup {
+  umbrella header "Pods-Gold Cup-umbrella.h"
+
+  export *
+  module * { export * }
+}
