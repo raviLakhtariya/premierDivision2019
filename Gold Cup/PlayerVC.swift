@@ -65,6 +65,11 @@ class PlayerVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITex
         isTogglePickerView = true
         viewForPIcker.isHidden = true
         lblTitle.text = "Select Team"
+        chooseTeamBtn.layer.cornerRadius = 10.0
+        chooseTeamBtn.clipsToBounds = true
+        chooseTeamBtn.layer.shadowRadius = 1.0
+        chooseTeamBtn.layer.shadowOpacity = 0.5
+
     }
     
  

@@ -484,14 +484,15 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     }
                 }
             }
-        }
-        if self.arrForFutureMathces.count == 0 {
-           self.setView(view: viewtable, hidden: false)
-        }else{
-            self.setView(view: viewtable, hidden: true)
-                     self.tableview.reloadData()
-        }
+            if self.arrForFutureMathces.count == 0 {
+                self.setView(view: viewtable, hidden: false)
+            }else{
+                self.setView(view: viewtable, hidden: true)
+                self.tableview.reloadData()
+            }
 
+        }
+        
     }
     func animateZoomForCell(zoomeCell : UITableViewCell){
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
@@ -527,7 +528,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func setView(view: UIView, hidden: Bool) {
-        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: view, duration: 0, options: .transitionCrossDissolve, animations: {
             view.isHidden = hidden
         })
     }
