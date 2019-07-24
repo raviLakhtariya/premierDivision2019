@@ -77,12 +77,15 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             }
         }else if segmentBtn.selectedSegmentIndex == 1 {
             if arrForliveMatches == nil {
+                
+                
                 return 0
             }else{
                 return arrForliveMatches.count
             }
         }else {
             if arrForFutureMathces == nil {
+                
                 return 0
             }else{
                 return arrForFutureMathces.count
@@ -164,9 +167,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             matchesCellObj.timeSchedule.text = matchesObj.date
    
         }else if segmentBtn.selectedSegmentIndex == 1 {
-            if self.arrForliveMatches.count == 0 {
-                self.viewtable.isHidden = false
-            }
+           
             let matchesObj:MatchesModel = self.arrForliveMatches[indexPath.row]as! MatchesModel
             
             for i in 0..<(arrForTeam.count){
@@ -223,9 +224,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             matchesCellObj.timeSchedule.text = matchesObj.date
         }else {
            let matchesObj:MatchesModel = self.arrForFutureMathces[indexPath.row]as! MatchesModel
-            if self.arrForFutureMathces.count == 0 {
-                self.viewtable.isHidden = false
-            }
+       
             for i in 0..<(arrForTeam.count){
                 var artmobj : Team = self.arrForTeam.object(at: i) as! Team
                 
@@ -413,6 +412,9 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                                     }
                                 }
                             }
+                            if self.arrForliveMatches.count == 0 {
+                                self.setView(view: self.viewtable, hidden: false)
+                            }
                                    self.tableview.reloadData()
                         }
                     })
@@ -438,8 +440,13 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                         }
                     }
                 }
-            self.tableview.reloadData()
-
+            if self.arrForPastMatches.count == 0 {
+                self.setView(view: self.viewtable, hidden: false)
+            }else{
+                 self.setView(view: self.viewtable, hidden: true)
+                self.tableview.reloadData()
+            }
+            
         }else if segmentBtn.selectedSegmentIndex == 1 {
                 for i in 0..<self.arrForMatches.count{
                     let matchesObj:MatchesModel = self.arrForMatches[i]as! MatchesModel
@@ -456,7 +463,13 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     }
                 }
             }
-             self.tableview.reloadData()
+            if self.arrForliveMatches.count == 0 {
+                self.setView(view: self.viewtable, hidden: false)
+            }else{
+                self.setView(view: self.viewtable, hidden: true)
+                self.tableview.reloadData()
+            }
+            
         }else{
             for i in 0..<self.arrForMatches.count{
                 let matchesObj:MatchesModel = self.arrForMatches[i]as! MatchesModel
@@ -472,7 +485,13 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                 }
             }
         }
-         self.tableview.reloadData()
+        if self.arrForFutureMathces.count == 0 {
+           self.setView(view: viewtable, hidden: false)
+        }else{
+            self.setView(view: viewtable, hidden: true)
+                     self.tableview.reloadData()
+        }
+
     }
     func animateZoomForCell(zoomeCell : UITableViewCell){
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
@@ -507,5 +526,9 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         return dateString as NSString
     }
     
-
+    func setView(view: UIView, hidden: Bool) {
+        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            view.isHidden = hidden
+        })
+    }
 }
