@@ -42,6 +42,8 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentBtn.selectedSegmentIndex = 1
+        
         
         // Do any additional setup after loading the view.
     }
@@ -59,8 +61,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.arrForliveMatches.removeAllObjects()
+        self.arrForPastMatches.removeAllObjects()
+        self.arrForFutureMathces.removeAllObjects()
         initialViewSetup()
-        segmentBtn.selectedSegmentIndex = 1
         dataFecthonQuery()
         
     }
@@ -132,10 +136,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                                 
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.homeTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                          //          Utility.hideLoading()
                                 }else{
                                     matchesCellObj.homeTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                              //      Utility.hideLoading()
                                 }
                             }
                         }
@@ -154,10 +158,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                             DispatchQueue.main.async() {
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.awayTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                        //            Utility.hideLoading()
                                 }else{
                                     matchesCellObj.awayTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                        //            Utility.hideLoading()
                                 }
                             }
                         }
@@ -189,10 +193,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                                 
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.homeTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                            //        Utility.hideLoading()
                                 }else{
                                     matchesCellObj.homeTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                             //       Utility.hideLoading()
                                 }
                             }
                         }
@@ -211,10 +215,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                             DispatchQueue.main.async() {
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.awayTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                               //     Utility.hideLoading()
                                 }else{
                                     matchesCellObj.awayTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                                //    Utility.hideLoading()
                                 }
                             }
                         }
@@ -242,10 +246,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                             DispatchQueue.main.async() {
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.homeTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                              //      Utility.hideLoading()
                                 }else{
                                     matchesCellObj.homeTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                                //    Utility.hideLoading()
                                 }
                             }
                         }
@@ -264,10 +268,10 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                             DispatchQueue.main.async() {
                                 if artmobj.id! == "2989" {
                                     matchesCellObj.awayTeamImg.image = UIImage.init(named: "asset-no-image")
-                                    Utility.hideLoading()
+                               //     Utility.hideLoading()
                                 }else{
                                     matchesCellObj.awayTeamImg.image = UIImage(data: data)
-                                    Utility.hideLoading()
+                                //    Utility.hideLoading()
                                 }
                             }
                         }
@@ -367,7 +371,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     func dataFecthonQuery(){
         
-        Utility.showLoading()
+      //  Utility.showLoading()
         
         let urlString = Webservice.BASE_URL_SEASON
         
@@ -395,7 +399,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     
                     Parser.parseMatches(self.jsonObj, toArray: self.arrForMatches, completion: { (result) in
                         print(self.arrForMatches)
-                        Utility.hideLoading()
+                //        Utility.hideLoading()
                         if self.segmentBtn.selectedSegmentIndex == 1 {
                             var currentdate =  self.GetOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd HH:mm:ss", conVertFormate: "yyyy-MM-dd", convertDate:self.currentDate() as! NSString) as String
                           
@@ -426,7 +430,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         var currentdate =  self.GetOnlyDateMonthYearFromFullDate(currentDateFormate: "yyyy-MM-dd HH:mm:ss", conVertFormate: "yyyy-MM-dd", convertDate:self.currentDate() as! NSString) as String
         
         if segmentBtn.selectedSegmentIndex == 0 {
-        
+        self.arrForPastMatches.removeAllObjects()
             for i in 0..<self.arrForMatches.count{
                 let matchesObj:MatchesModel = self.arrForMatches[i]as! MatchesModel
             
@@ -448,6 +452,7 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             }
             
         }else if segmentBtn.selectedSegmentIndex == 1 {
+            self.arrForliveMatches.removeAllObjects()
                 for i in 0..<self.arrForMatches.count{
                     let matchesObj:MatchesModel = self.arrForMatches[i]as! MatchesModel
               
@@ -471,6 +476,8 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             }
             
         }else{
+            self.arrForFutureMathces.removeAllObjects()
+            
             for i in 0..<self.arrForMatches.count{
                 let matchesObj:MatchesModel = self.arrForMatches[i]as! MatchesModel
 
@@ -528,8 +535,8 @@ class MatchesVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func setView(view: UIView, hidden: Bool) {
-        UIView.transition(with: view, duration: 0, options: .transitionCrossDissolve, animations: {
+     //   UIView.transition(with: view, duration: 0, options: .transitionCrossDissolve, animations: {
             view.isHidden = hidden
-        })
+      //  })
     }
 }
